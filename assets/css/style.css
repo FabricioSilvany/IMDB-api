@@ -4,10 +4,16 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body{
+    background-color: black;
+    color: white;
+}
+
 h1.title{
-    background-color: lightgreen;
-    color: #333;
+    color: lightgreen;
+    font-size: 50px;
     padding: 10px;
+    text-align: center;
 }
 
 form{
@@ -25,6 +31,11 @@ form input#pesquisa{
     flex: 1px;
 }
 
+form input#pesquisa:focus{
+    background-color: #333;
+    color: white;
+}
+
 form button{
     padding: 5px 10px;
     background-color: lightgreen;
@@ -34,7 +45,7 @@ form button{
     cursor: pointer;
 }
 
-form button:hover{
+form button:hover{  
     background-color: darkseagreen;
 }
 
@@ -49,18 +60,37 @@ div.lista {
 
 div.item{
     text-align: center;
-    padding: 10px;
+    overflow: hidden;
+    padding: 20px;
     width: 200px;
-    border: 2px solid lightgreen;
+    border: 2px;
     border-radius: 5px  ;
-    margin: 5px;
+    margin: 20px;
+    box-shadow: 0px 6px 10px #363535;
 }
 
 div.item:hover{
-    background-color: lightgreen;
+    transform: scale(1.5s);
     cursor: pointer;
 }
 
 div.item img{
     width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
 }
+
+form button, div.item {
+    transition: background-color 0.8s ease;
+}
+
+div.item h2{
+    font-size: 16px;
+        margin-top: 4px;
+    }
+
+div.item img:hover{
+    transform: scale(1.1);
+}   
